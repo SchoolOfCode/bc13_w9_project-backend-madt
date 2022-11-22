@@ -14,13 +14,9 @@ const {
 } = require("../models/customers.js");
 
 router.get("/", async function (req, res) {
-  if (req.query.search !== undefined) {
-    const searchedCustomer = await getCus(req.query.search);
-    return res.json({ success: true, payload: searchedCustomer });
-  }
-
-  const customer = await getCustomer();
+  const customer = await getCus();
   res.json({ success: true, payload: customer });
+  
 });
 
 router.get("/:id", async function (req, res) {

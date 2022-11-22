@@ -21,6 +21,9 @@ app.use(morgan("dev"))
 app.use("/api/post", postRouter);
 app.use("/api/customer", customerRouter);
 
+app.get('/', (req, res) => {
+  res.send('GET request to the homepage')
+})
 
 // Listening Port
 app.listen(PORT, () => {
