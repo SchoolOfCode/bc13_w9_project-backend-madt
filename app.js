@@ -3,12 +3,16 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT;
 const morgan = require("morgan")
+const cors = require('cors')
 
 
 const postRouter = require("./routes/post.js")
 const customerRouter = require("./routes/customer.js")
 
-
+// Using cors to avoid localhost issue
+// https://expressjs.com/en/resources/middleware/cors.html
+app.use(cors())
+app.options('*', cors())
 // Parse the request JSON Body - This is an example of Middleware.
 app.use(express.json());
 
