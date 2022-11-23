@@ -5,6 +5,7 @@ const router = express.Router();
 import {
   getCus,
   cusById,
+  createCus
   /*
   createCustomer,
   updateCustomerById,
@@ -24,6 +25,12 @@ router.get("/:id", async function (req, res) {
   res.json({ success: true, payload: customer });
 });
 
+
+router.post("/", async function (req,res){
+  const newCustomer = await createCus(req.body);
+  res.status(201).json({success:true ,payload: newCustomer})
+  
+});
 
 
 /* export default router = customerRouter ; */
