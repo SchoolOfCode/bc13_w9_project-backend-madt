@@ -1,24 +1,24 @@
-const {query} = require ("../db/index")
+
+import {pool} from '../db/index.js' 
 
 
-async function getCus() {
+export async function getCus() {
 
 
     const result = await query ("SELECT * FROM customers ;");
     const cArray = result.rows;
-    return result.rows;
+    return cArray
 }
 
 
-async function cusById(id){
+export async function cusById(id){
     const result = await query ('SELECT * FROM customers WHERE customer_id = $1',[id]);
     const cus = result.rows
     return cus;
 }
 
-module.exports = {
- cusById,
- getCus
+//  async function create(){
+//     const result = await query ('INSERT INTO ')
+//  }
 
 
-}

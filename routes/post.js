@@ -1,17 +1,17 @@
-const express = require("express");
+import express from 'express'
 const router = express.Router();
 // Write your router code here!
 
-const {
+import {
   getPosts,
   postsById,
   /*
-  createCustomer,
-  updateCustomerById,
-  deleteCustomerById,
+  createPost,
+  
+  
   */
 
-} = require("../models/posts.js");
+}  from "../models/posts.js";
 
 router.get("/", async function (req, res) {
   const posts = await getPosts();
@@ -24,7 +24,11 @@ router.get("/:id", async function (req, res) {
   res.json({ success: true, payload: posts });
 });
 
+router.post("/", async function (req,res){
+  const newPost = await createPost(req.body);
+  res.status(201).json({success:true ,payload: newPost})
+  
+})
 
-
-module.exports = router;
+export default router = postRouter
 

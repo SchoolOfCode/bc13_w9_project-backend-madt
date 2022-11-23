@@ -1,8 +1,8 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
 // Write your router code here!
 
-const {
+import {
   getCus,
   cusById,
   /*
@@ -11,7 +11,7 @@ const {
   deleteCustomerById,
   */
 
-} = require("../models/customers.js");
+} from "../models/customers.js";
 
 router.get("/", async function (req, res) {
   const customer = await getCus();
@@ -26,5 +26,5 @@ router.get("/:id", async function (req, res) {
 
 
 
-module.exports = router;
+export default router = customerRouter ;
 

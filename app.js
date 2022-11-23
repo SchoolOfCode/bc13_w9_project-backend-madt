@@ -1,18 +1,19 @@
-require('dotenv').config()
-const express = require("express");
+import dotenv from 'dotenv'
+
+import express from "express";
 const app = express();
 const PORT = process.env.PORT;
-const morgan = require("morgan")
-const cors = require('cors')
+import morgan from "morgan"
+// import {cors} from 'cors'
 
 
-const postRouter = require("./routes/post.js")
-const customerRouter = require("./routes/customer.js")
+import postRouter  from "./routes/post.js"
+import customerRouter from "./routes/customer.js"
 
 // Using cors to avoid localhost issue
 // https://expressjs.com/en/resources/middleware/cors.html
-app.use(cors())
-app.options('*', cors())
+// app.use(cors())
+// app.options('*', cors())
 // Parse the request JSON Body - This is an example of Middleware.
 app.use(express.json());
 
