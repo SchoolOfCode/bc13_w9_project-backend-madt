@@ -14,7 +14,7 @@ export async function postsById(id){
 
 export async function createPost(body){
     const { customer_id, title, description,stack} = body;
-    const result = await pool.query (`INSERT INTO posts (customer_id,title,description,stack) VALUES ('${customer_id}','${title}','${description},'${stack}')`)
+    const result = await pool.query (`INSERT INTO posts (customer_id,title,description,stack) VALUES ('${customer_id}','${title}','${description}','${stack}')`)
     const nPost = result.body
     return nPost
 }
