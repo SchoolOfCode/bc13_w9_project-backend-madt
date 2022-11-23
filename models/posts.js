@@ -13,8 +13,14 @@ export async function postsById(id){
 }
 
 export async function createPost(body){
-    const { customer_id, title, description,stack} = body;
-    const result = await pool.query (`INSERT INTO posts (customer_id,title,description,stack) VALUES ('${customer_id}','${title}','${description}','${stack}')`)
+    const { user_name, title, description,stack} = body;
+    const result = await pool.query (`INSERT INTO posts (user_name,title,description,stack) VALUES ('${user_name}','${title}','${description}','${stack}')`)
     const nPost = result.body
     return nPost
+}
+
+export async function delPost(username){
+    const result = await pool.query(`DELETE FROM posts WHERE user_name = $1`,[username])
+    const dPost = result.body
+    return dPost
 }
