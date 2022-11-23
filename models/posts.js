@@ -8,7 +8,8 @@ export async function getPosts() {
   
 export async function getPostsByStack(stack) {
     const result = await pool.query (`SELECT * FROM posts WHERE stack LIKE $1`,['%' + stack.toLowerCase() + '%']);
-    const pArray = result.rows;      
+    const pArray = result.rows;
+         
     return pArray
 }
 

@@ -13,8 +13,8 @@ import {
 
 router.get("/", async function (req, res) {
  if(req.query.stack !== undefined){
-  const posts = await getPostsByStack(req.query.stack);
-  res.json({ success: true, payload: posts });
+  const post = await getPostsByStack(req.query.stack);
+  res.json({ success: true, payload: post });
  }
     const posts = await getPosts();
     res.json({ success: true, payload: posts });
@@ -28,10 +28,7 @@ router.get("/:id", async function (req, res) {
 });
 
 
-  router.get("/", async function(){
-  
-   
-  })
+ 
 
 router.post("/", async function (req,res){
   const newPost = await createPost(req.body);
