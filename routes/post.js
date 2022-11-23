@@ -5,12 +5,7 @@ const router = express.Router();
 import {
   getPosts,
   postsById,
-  /*
   createPost,
-  
-  
-  */
-
 }  from "../models/posts.js";
 
 router.get("/", async function (req, res) {
@@ -30,5 +25,5 @@ router.post("/", async function (req,res){
   
 })
 
-export default router = postRouter
-
+/* export default router = postRouter */
+export default router;

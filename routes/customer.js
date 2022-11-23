@@ -26,5 +26,6 @@ router.get("/:id", async function (req, res) {
 
 
 
-export default router = customerRouter ;
+/* export default router = customerRouter ; */
 
+export default router;
