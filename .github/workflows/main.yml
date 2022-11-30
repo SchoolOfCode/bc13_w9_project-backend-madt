@@ -5,7 +5,7 @@ on:
   push:
     branches: [main]
   # also runs inside pull requests that target the main branch
-  pull_request:
+  pull request:
     branches: [main]
 
 
