@@ -1,6 +1,6 @@
 # Project Match Backend
 
-An App for collaborating with other programmers on repositories
+An App for collaborating with other programmers on repositories (this is the backend of this app)
 ## Authors
 
 - [Amina E](https://www.github.com/edmundsamina)
@@ -45,3 +45,7 @@ An App for collaborating with other programmers on repositories
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `username`      | `string` | **Required**. username of user to delete |
+
+
+Schema 
+
