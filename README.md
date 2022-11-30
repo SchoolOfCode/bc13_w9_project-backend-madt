@@ -49,3 +49,14 @@ An App for collaborating with other programmers on repositories (this is the bac
 
 Schema 
 
+#### To initialize server at port 3001
+
+```http
+  Npm run dev
+```
+
+#### To test
+
+```http
+  Npm T
+```
