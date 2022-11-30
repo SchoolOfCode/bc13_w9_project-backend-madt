@@ -15,7 +15,6 @@ router.get("/", async function (req, res) {
   if (req.query.stack !== undefined) {
     const post = await getPostsByStack(req.query.stack);
     res.json({ success: true, payload: post });
- 
   } else {
     const posts = await getPosts();
     res.json({ success: true, payload: posts });
