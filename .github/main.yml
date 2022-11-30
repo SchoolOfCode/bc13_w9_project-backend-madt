@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  # runs on pushes to the main branch
+  push:
+    branches: [main]
+  # also runs inside pull requests that target the main branch
+  pull_request:
+    branches: [main]
+
+
+      # run ESLint & Prettier
+      - run: npm run lint
+      - run: npm run prettier
+      # verify that there are no build errors
+      - run: npm T
+      # run test suite
