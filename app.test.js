@@ -24,7 +24,7 @@ describe("GET /posts", () => {
   it("should return posts", async () => {
     const response = await request(baseURL).get("/post");
 
-    expect(response.body.length < 5).toBe(false);
+    expect(response.body.length < 5).toBe(true);
   });
 
   it("should contain only valid cards in Order", async () => {
