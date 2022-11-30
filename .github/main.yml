@@ -10,6 +10,7 @@ on:
 
 
       # run ESLint & Prettier
+      - run: npm ci
       - run: npm run lint
       - run: npm run prettier
       # verify that there are no build errors
