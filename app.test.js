@@ -1,6 +1,6 @@
 const request = require("supertest")
 const baseURL = "http://localhost:3001/api"
-
+/** This test adds data to our sql database and then removes it to test that the endpoints are working  */
 describe("GET /posts", () => {
     const newposts = {
     user_name : "cmnd",

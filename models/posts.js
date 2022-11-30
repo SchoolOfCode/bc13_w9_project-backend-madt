@@ -27,7 +27,7 @@ export async function createPost(body){
     console.log(nPost)
     return nPost
 }
-
+/** This function needs to be amended so that it deletes by two data fields instead of one, to allow for the deletion of individual posts */
 export async function delPost(username){
     const result = await pool.query(`DELETE FROM posts WHERE user_name = $1 RETURNING *`,[username])
     const dPost = result.rows

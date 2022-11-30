@@ -21,8 +21,3 @@ export async function createCus(body){
     return cus;
 }
 
-//  async function create(){
-//     const result = await query ('INSERT INTO ')
-//  }
-
-
