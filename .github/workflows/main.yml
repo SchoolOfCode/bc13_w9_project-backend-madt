@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  # runs on pushes to the main branch
+  push:
+    branches: [main]
+  # also runs inside pull requests that target the main branch
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    
+      # install dependencies
+      - run: npm ci
+      # run ESLint & Prettier
+      
+      - run: npm run prettier
+      # verify that there are no build errors
+      - run: npm t
+      # run tests with Cypress
+     
