@@ -1,5 +1,6 @@
 import { pool } from "../db/index.js";
 
+//these are the function models 
 export async function getCus() {
   const result = await pool.query(`SELECT * FROM customers`);
   const cArray = result.rows;
