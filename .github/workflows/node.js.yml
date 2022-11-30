@@ -27,5 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    
+    - run: npm start & npx wait-on http://localhost:3001
+ 
     - run: npm test
