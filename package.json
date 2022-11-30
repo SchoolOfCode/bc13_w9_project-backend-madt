@@ -1,9 +1,11 @@
 {
   "type": "module",
   "scripts": {
-    "start": "node app.js",
+    "start": " node -r dotenv/config app.js",
     "dev": "nodemon -r dotenv/config app.js",
-    "test": "jest"
+    "test": "jest",
+    "build": "react-scripts build"
+
   },
   "dependencies": {
     "cors": "^2.8.5",
