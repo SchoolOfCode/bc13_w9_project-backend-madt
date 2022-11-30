@@ -12,6 +12,7 @@ on:
       # run ESLint & Prettier
       jobs:
       build:
+      runs-on: ubuntu-latest
       steps:
       - run: npm ci
       - run: npm run lint
