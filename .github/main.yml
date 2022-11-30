@@ -9,10 +9,23 @@ on:
     branches: [main]
 
 
-      # run ESLint & Prettier
+      
+        build:
+    
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+          cache: "npm"
+      # install dependencies
       - run: npm ci
+      # run ESLint & Prettier
       - run: npm run lint
       - run: npm run prettier
       # verify that there are no build errors
-      - run: npm T
-      # run test suite
+      - run: npm t
+      
+      
+          start: npm start
